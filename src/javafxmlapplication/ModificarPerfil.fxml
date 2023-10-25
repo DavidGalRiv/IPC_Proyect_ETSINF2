@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" prefHeight="810.0" prefWidth="570.0" stylesheets="@estilosBotones.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.ModificarPerfilController">
+   <top>
+      
+   </top>
+   <bottom>
+      <HBox prefHeight="97.0" prefWidth="686.0" style="-fx-border-color: #84B118; -fx-border-width: 8; -fx-background-color: linear-gradient(from 0% 0% to 100% 200%, repeat, #16779F 0%, #84B118 55%, #15622E 80%);" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="100.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../resources/pelota2.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="476.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="58.0" prefWidth="327.0" text="Síguenos en nuestras redes sociales donde informamos de todos los eventos y de noticias sobre nuestras instalaciones" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS" />
+                  <Label prefHeight="18.0" prefWidth="330.0" text="\@GreenBallFC @GreenBallTW  Número: 646341719" textFill="WHITE" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_RIGHT" prefHeight="345.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="110.0" prefWidth="567.0" style="-fx-border-color: #84B118; -fx-border-width: 8; -fx-background-color: linear-gradient(from 0% 0% to 100% 200%, repeat, #16779F 0%, #84B118 55%, #15622E 80%);">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="294.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="labelNombre" prefHeight="33.0" prefWidth="246.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="labelPistaReservada" alignment="CENTER" contentDisplay="CENTER" prefHeight="73.0" prefWidth="247.0" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="25.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="99.0" prefWidth="362.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="26.0" prefWidth="100.0" text="Más opciones" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <MenuButton fx:id="opcionesBoton" mnemonicParsing="false" prefHeight="68.0" prefWidth="94.0">
+                           <items>
+                              <MenuItem fx:id="miMenu" mnemonicParsing="false" onAction="#miMenu" text="Menu principal" />
+                              <MenuItem fx:id="hacerReserva" mnemonicParsing="false" onAction="#menuReservar" text="Hacer reservas" />
+                              <MenuItem fx:id="miReserva" mnemonicParsing="false" onAction="#menuMiReserva" text="Ver mis reservas" />
+                              <MenuItem fx:id="cerrar" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                           </items>
+                           <graphic>
+                              <ImageView fx:id="fotoPerfil" fitHeight="60.0" fitWidth="62.0" pickOnBounds="true" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="594.0" prefWidth="567.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="638.0" prefWidth="568.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="TOP" prefHeight="80.0" prefWidth="515.0" style="-fx-font-size: 30; -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat,  #84B118 0%, #15622E 50%); -fx-font-weight: bold;" text="Modificar Perfil" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="CENTER" prefHeight="614.0" prefWidth="547.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="560.0" prefWidth="547.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="136.0" minWidth="6.399999999999999" prefWidth="44.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="466.3999794006347" minWidth="10.0" prefWidth="93.5999755859375" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="466.3999794006347" minWidth="10.0" prefWidth="263.4000122070313" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="187.0" minWidth="10.0" prefWidth="78.59998779296876" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="187.0" minWidth="10.0" prefWidth="100.4000122070313" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="34.39998779296875" minHeight="10.0" prefHeight="26.99999084472656" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="35.99999465942382" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="47.2" minHeight="10.0" prefHeight="26.400005340576172" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="57.59998779296875" minHeight="10.0" prefHeight="27.999993896484384" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="63.99998168945311" minHeight="10.0" prefHeight="42.20001220703125" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="58.399987792968744" minHeight="10.0" prefHeight="37.59999694824219" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="50.0" minHeight="4.0" prefHeight="37.59998779296873" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="105.0" minHeight="4.999987792968739" prefHeight="34.40001220703124" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="27.199993896484386" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="27.4000244140625" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="97.0" minHeight="4.0" prefHeight="67.39997558593751" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="92.0" minHeight="0.0" prefHeight="1.6000000000000227" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="47.80000000000001" minHeight="10.0" prefHeight="46.19999999999999" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="43.39999999999998" minHeight="10.0" prefHeight="17.800048828125" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="59.80000000000007" minHeight="10.0" prefHeight="59.80000000000007" valignment="CENTER" vgrow="ALWAYS" />
+                                    <RowConstraints maxHeight="43.39999999999998" minHeight="0.0" prefHeight="0.0" valignment="CENTER" vgrow="ALWAYS" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="NúmeroTarjeta" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#tarjetaClick" prefHeight="26.0" prefWidth="203.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <TextField fx:id="CVV" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#cvvClick" prefHeight="28.0" prefWidth="78.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <PasswordField fx:id="contraseña" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#contraseñaClick" prefWidth="220.0" promptText="Contraseña nueva*" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <Button fx:id="fotoBoton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cambiarFoto" prefHeight="49.0" prefWidth="87.0" text="Edita la foto de perfil" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="11">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="actualizarBoton" alignment="CENTER" contentDisplay="CENTER" minWidth="-Infinity" mnemonicParsing="false" onAction="#actualizar" prefHeight="43.0" prefWidth="318.0" text="Actualizar" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="14">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <CheckBox fx:id="mostrarContra" disable="true" mnemonicParsing="false" text="Ver contraseña" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField fx:id="textfield1" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#contraseñaClick" prefWidth="220.0" promptText="Contraseña nueva*" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="100.0" style="-fx-border-color: #15622E;" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fx:id="ImagenPerfil" fitHeight="101.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </VBox>
+                                    <Button fx:id="nombreBoton" mnemonicParsing="false" onAction="#editarNombre" prefHeight="27.0" prefWidth="63.0" stylesheets="@estilosBotones.css" text="Editar" textFill="WHITE" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button fx:id="apellidosBoton" mnemonicParsing="false" onAction="#editarApellidos" prefHeight="27.0" prefWidth="63.0" text="Editar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button fx:id="telBoton" mnemonicParsing="false" onAction="#editarTel" prefHeight="27.0" prefWidth="63.0" text="Editar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button fx:id="contraseñaBoton" mnemonicParsing="false" onAction="#editarContra" prefHeight="27.0" prefWidth="63.0" text="Editar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button fx:id="tarjetaBoton" mnemonicParsing="false" onAction="#editarTarjeta" prefHeight="27.0" prefWidth="63.0" text="Editar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button fx:id="cvvBoton" mnemonicParsing="false" onAction="#editarCVV" prefHeight="27.0" prefWidth="63.0" text="Editar" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Label alignment="CENTER" prefHeight="29.0" prefWidth="95.0" text="Nombre: " GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="100.0" style="-fx-font-weight: bold;" text="Apellidos:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label alignment="CENTER" prefHeight="26.0" prefWidth="92.0" style="-fx-font-weight: bold;" text="Teléfono:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label alignment="CENTER" prefHeight="32.0" prefWidth="93.0" style="-fx-font-weight: bold;" text="Nickname:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="89.0" style="-fx-font-weight: bold;" text="Contraseña:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label style="-fx-font-weight: bold;" text="Número de tarjeta:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label alignment="CENTER" prefHeight="36.0" prefWidth="90.0" style="-fx-font-weight: bold;" text="CVV:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <TextField fx:id="telefóno" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#telefonoClick" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="apellidos" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#apellidosClick" prefHeight="26.0" prefWidth="194.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="nombre1" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#nombreClick" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" visible="false" GridPane.columnIndex="2" />
+                                    <Label fx:id="nombreLabel" prefHeight="18.0" prefWidth="174.0" GridPane.columnIndex="2" />
+                                    <Label fx:id="apellidosLabel" prefHeight="17.0" prefWidth="243.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Label fx:id="telefonoLabel" prefHeight="18.0" prefWidth="147.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="nicknameLabel" prefHeight="18.0" prefWidth="129.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Label fx:id="numerotarjetaLabel" prefHeight="17.0" prefWidth="243.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <Label fx:id="cvvLabel" prefHeight="18.0" prefWidth="186.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <Label contentDisplay="CENTER" prefHeight="36.0" prefWidth="94.0" style="-fx-font-weight: bold;" text="Contraseña antigua:" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <PasswordField fx:id="contraseñaAntigua" disable="true" layoutX="148.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#contraseñaClickA" prefWidth="220.0" promptText="Contraseña antigua*" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField fx:id="textfield2" disable="true" layoutX="148.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#contraseñaClickA" prefWidth="220.0" promptText="Contraseña antigua*" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #15622E; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 3); -fx-prompt-text-fill: black;" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <CheckBox fx:id="mostrarCVV" mnemonicParsing="false" text="Mostrar tarjeta y CVV" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <Label fx:id="labelImagen" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                    <Label fx:id="labelContraseña" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <Button fx:id="cancelarCambioBoton" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelarCambio" prefHeight="27.0" prefWidth="70.0" text="Cancelar " textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="11.5" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="cancelarNombreBoton" mnemonicParsing="false" onAction="#cancelarNombre" prefHeight="27.0" prefWidth="70.0" text="Cancelar" textFill="WHITE" GridPane.columnIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="cancelarApellidoBoton" mnemonicParsing="false" onAction="#cancelarApellido" prefHeight="27.0" prefWidth="70.0" text="Cancelar" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="cancelarTelefonoBoton" mnemonicParsing="false" onAction="#cancelarTelefono" prefHeight="27.0" prefWidth="70.0" text="Cancelar" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="cancelarTarjetaBoton" mnemonicParsing="false" onAction="#cancelarTarjeta" prefHeight="27.0" prefWidth="70.0" text="Cancelar" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="cancelarCVVBoton" mnemonicParsing="false" onAction="#cancelarCVV" prefHeight="27.0" prefWidth="70.0" text="Cancelar" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

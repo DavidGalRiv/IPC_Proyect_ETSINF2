@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" prefHeight="783.0" prefWidth="680.0" stylesheets="@estilosBotones.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmlapplication.HacerReservasController">
+   <top>
+   </top>
+   <bottom>
+      <HBox prefHeight="97.0" prefWidth="686.0" style="-fx-border-color: #84B118; -fx-border-width: 8; -fx-background-color: linear-gradient(from 0% 0% to 100% 200%, repeat, #16779F 0%, #84B118 55%, #15622E 80%);" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="20.0" right="100.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../resources/pelota2.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="476.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="58.0" prefWidth="327.0" text="Síguenos en nuestras redes sociales donde informamos de todos los eventos y de noticias sobre nuestras instalaciones" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" VBox.vgrow="ALWAYS" />
+                  <Label prefHeight="18.0" prefWidth="330.0" text="\@GreenBallFC @GreenBallTW  Número: 646341719" textFill="WHITE" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="TOP_RIGHT" prefHeight="345.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="37.0" prefWidth="686.0" style="-fx-border-color: #84B118; -fx-border-width: 8; -fx-background-color: linear-gradient(from 0% 0% to 100% 200%, repeat, #16779F 0%, #84B118 55%, #15622E 80%);">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="294.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="labelNombre" prefHeight="33.0" prefWidth="246.0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="labelPistaReservada" prefHeight="73.0" prefWidth="247.0" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="25.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="99.0" prefWidth="362.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="25.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="26.0" prefWidth="100.0" text="Más opciones" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <MenuButton fx:id="opcionesBoton" mnemonicParsing="false" prefHeight="68.0" prefWidth="94.0">
+                           <items>
+                              <MenuItem fx:id="miMenu" mnemonicParsing="false" onAction="#miMenu" text="Menu principal" />
+                              <MenuItem fx:id="miReserva" mnemonicParsing="false" onAction="#menuMiReserva" text="Ver mis reservas" />
+                              <MenuItem fx:id="modificar" mnemonicParsing="false" onAction="#modificarPerfil" text="Modificar Perfil" />
+                              <MenuItem fx:id="cerrar" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesión" />
+                           </items>
+                           <graphic>
+                              <ImageView fx:id="fotoPerfil" fitHeight="60.0" fitWidth="62.0" pickOnBounds="true" />
+                           </graphic>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="577.0" prefWidth="686.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="686.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="TOP" prefHeight="58.0" prefWidth="514.0" style="-fx-font-size: 36; -fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat,  #84B118 0%, #15622E 50%); -fx-font-weight: bold;" text="Hacer Reservas" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="97.0" prefWidth="660.0" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="55.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label style="-fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat,  #84B118 0%, #15622E 50%);" text="Seleccione el día">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="calendarioBoton" />
+                                    <Label fx:id="saberDia" style="-fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat,  #84B118 0%, #15622E 50%);">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="55.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label style="-fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat,  #84B118 0%, #15622E 50%); -fx-font-weight: bold;" text="Seleccione la pista">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="seleccionPistaBoton" prefWidth="150.0" />
+                                    <Label fx:id="saberPista" style="-fx-text-fill: linear-gradient(from 0% 0% to 100% 200%, repeat,  #84B118 0%, #15622E 50%); -fx-font-weight: bold;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="312.0" prefWidth="716.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <GridPane fx:id="GridPane" prefHeight="400.0" prefWidth="666.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="426.4" minWidth="10.0" prefWidth="426.4" />
+                                          <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Button fx:id="mostrarDisponBoton" mnemonicParsing="false" onAction="#mostrarDisponibilidad" prefHeight="37.0" prefWidth="400.0" text="Visualizar disponibilidad" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="reservarBoton" disable="true" mnemonicParsing="false" onAction="#hacerReserva" prefHeight="36.0" prefWidth="250.0" text="Hacer Reserva" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <stylesheets>
+      <URL value="@estilosBotones.css" />
+      <URL value="@calendario.css" />
+   </stylesheets>
+</BorderPane>
